@@ -1,12 +1,13 @@
 .design
   // height: 400vh
   // background-color: green
+  margin-top: 2.5rem
 
   &__bottom
     // background-color: orange
     padding: 2rem
     display: flex
-    // height: 50vh
+    height: 50vh
     // flex-direction: column
 
     &-l
@@ -33,6 +34,15 @@
 
   &__link
     display: flex
+    margin-top: 2rem
     svg
       width: 25px
-      margin-left: 1rem
+      margin-left: 0.5rem
+      g
+        fill: $color-green-dk
+        transition: all 0.2s ease-in-out
+
+    &:hover
+      svg
+        g
+          fill: $color-black
