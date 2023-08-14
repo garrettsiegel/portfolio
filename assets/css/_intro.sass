@@ -1,0 +1,80 @@
+.intro
+  +flexColumnAlignCenter
+  justify-content: center
+  height: 100vh
+
+  +from(s)
+    height: 100vh
+
+  &__container
+    max-width: 500px
+    +flexColumnAlignCenter
+    text-align: center
+    padding-inline: 1rem
+
+    +from(s)
+      margin-block: 0
+      padding-top: 5rem
+      padding-inline: 0
+
+  &__image
+    border-radius: 50%
+    width: 200px
+    height: 200px
+    margin-bottom: 1rem
+
+  &__overline, &__desc
+    font-weight: 700
+
+  &__desc-top
+    margin-top: 1.25em
+    font-weight: 900
+    font-size: 1.25rem
+    line-height: 1
+
+  &__desc-bottom
+    font-weight: 400
+    font-size: 0.9rem
+    line-height: 1.3   
+    margin-top: 0.5rem
+
+  &__button
+    +reset
+    width: 40px
+    height: 40px
+    margin-top: 1rem
+
+    svg
+      #down-circle1
+        transition: all 0.3s ease-in-out
+        fill: $color-white
+
+      #down-circle2
+        transition: all 0.3s ease-in-out
+        stroke: $color-black
+
+      #down-polyline
+        transition: all 0.3s ease-in-out
+        stroke: $color-black
+
+      &:hover
+        #down-circle1
+          fill: $color-black
+
+        #down-polyline
+          stroke: $color-white
+
+.projects
+  display: grid
+  grid-template-columns: 1fr
+  grid-gap: 1rem
+
+@media screen and (min-width: 768px)
+  .projects
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 1rem
+    margin-top: 2rem
+  
+.intro__name, .intro__desc
+  text-align: center

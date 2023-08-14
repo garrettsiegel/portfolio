@@ -1,43 +1,48 @@
+import HideNav from "./hideNav"
+import LazyLoad from "./lazyLoad"
+import gridScroll from "./gridScroll"
+import gsap from 'gsap'
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
+
 class App {
 	constructor() {
-		this.init();
+		this.downButton = document.querySelector('.intro__button')
+		new HideNav()
+		new LazyLoad()
+		this.events()
+		this.skillsAnimation()
+		new gridScroll()
 	}
 
-	init() {
-		console.log("Hello from app.js");
-		// this.scrollyTelly();
-	}
+	events = () => {
+    this.downButton.addEventListener('click', this.downButtonHandler)
+  }
 
-	scrollyTelly = () => {
-		const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)");
+	downButtonHandler = () => {
+    gsap.to(window, { duration: 1, scrollTo: { y: '.about' }, ease: 'power2.out' })
+  }
 
-		const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
+	skillsAnimation = () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.webdev__skills',
+        start: 'top 80%',
+        end: 'bottom 55%',
+        scrub: 1,
+        // markers: true
+      }
+    });
+    tl.from('.webdev__headline', { opacity: 0, y: 20 });
 
-		gsap.set(photos, {autoAlpha: 0});
-
-		const animation = gsap.to(photos, {autoAlpha: 1, stagger: 0.5});
-
-		ScrollTrigger.create({
-			trigger:".gallery",
-			strart:"top top",
-			end:"bottom bottom",
-			pin:".right",
-			animation:animation,
-			scrub:true,
-		})
-
-		details.forEach((detail, i) => {
-			ScrollTrigger.create({
-				trigger:detail,
-				start:"center top",
-				end:"center center",
-				animation: gsap.to(photos[i], {autoAlpha: 1}),
-				scrub:true,
-				markers: true
-			})
-		})
-	};
+    const skillsArray = Array.from(document.querySelectorAll('.webdev__skill'));
+    skillsArray.sort(() => Math.random() - 0.2);
+    skillsArray.forEach((skill) => {
+      tl.from(skill, { opacity: 0, scale: 0.75 }, '-=0.25');
+    });
+  };
 
 }
 
-const app = new App();
+const app = new App()

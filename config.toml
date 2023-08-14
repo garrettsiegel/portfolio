@@ -1,6 +1,5 @@
 baseURL = 'https://garrettsiegel.com/'
 languageCode = 'en-us'
-title = 'New Hugo'
 enableRobotsTXT = true
 
 [security.exec]

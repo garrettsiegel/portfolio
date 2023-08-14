@@ -1,0 +1,32 @@
+h1, h2, h3, h4, h5, h6
+  font-family: $font-headline
+  font-weight: 900
+  text-transform: uppercase
+  color: $color-black
+
+p, div, li
+  font-family: $font-body
+  font-weight: 400
+  font-size: 1rem
+  line-height: 1.5
+
+.link a
+  color: $color-green-lt
+  text-decoration: underline
+  text-decoration-thickness: 2px
+  font-weight: 700
+  transition: all 0.2s ease-in-out
+
+  &:hover
+    color: $color-green-lt
+
+h1
+  font-size: 2.25rem
+  line-height: 0.8
+
+  +from(s)
+    font-size: 3.5rem
+
+h2
+  font-size: 3rem
+  line-height: 1

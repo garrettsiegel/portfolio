@@ -1,29 +1,12 @@
-{{ with .Site.Data.footer }}
 <footer>
+<div class="footer__contact">
+  <h3>Get in touch</h3>
+  <p>(561)310-1404</p>
+  <p>Garrett@submurgedcreative.com</p>
+</div>
 
-  <div class="credits">
-    {{ with .credits }}
-      <p>{{ .line1 }}</p>
-      <p>{{ .line2 }}</p>
-      <p class="is-light">{{ .line3 }}</p>
-    {{ end }}
-  </div>
 
-  <div class="recirc">
-    {{ with .recirc }}
-      <div class="recirc__title">{{ .title }}</div>
-      <div class="recirc__container">
-        {{ range .links }}
-          <a href="{{ .url }}" target="_blank" class="recirc__link">
-            <img src="{{ .imageSrc }}" alt="{{ .altText }}"/>
-            <!-- <div class="credits-recirc__image-text"> -->
-            <span>{{ .linkText }}</span>
-            <!-- </div> -->
-          </a>
-        {{ end }}
-      </div>
-    {{ end }}
-  </div>
-
+<div class="footer__credits">
+  <p>&copy; 2023 Garrett Siegel, Front End Developer & UI/UX Designer</p>
+</div>
 </footer>
-{{ end }}
