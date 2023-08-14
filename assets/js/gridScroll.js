@@ -4,7 +4,9 @@ gsap.registerPlugin(ScrollTrigger)
 
 class gridScroll {
   constructor() {
+    this.gridScrollWebDev()
     this.gridScroll()
+
   }
 
   gridScroll = () => {
@@ -20,6 +22,25 @@ class gridScroll {
         scrub: true,
         end: () => `+=${maxScroll}`, // Make the end dynamic
         pin: wrapper, // Pin the wrapper instead
+        // markers: true
+      }
+    });
+  }
+
+  gridScrollWebDev = () => {
+    const webdevGrid = document.querySelector('.webdev__grid');
+    const webdevGridContainer = document.querySelector('.webdev__grid-container');
+    const maxScroll = webdevGrid.offsetWidth - webdevGridContainer.offsetWidth;
+
+    gsap.to(webdevGrid, {
+      x: -maxScroll,
+      scrollTrigger: {
+        trigger: webdevGridContainer,
+        scrub: 1,
+
+        // start: 'top center',
+        end: () => `+=${maxScroll}`, // Make the end dynamic
+        pin: webdevGrid, // Pin the wrapper instead
         // markers: true
       }
     });

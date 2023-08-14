@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RBPBKXJ9F"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4RBPBKXJ9F');
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="" />
     <title>Garrett Siegel: Development & Design</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Syne:wght@400;500;700&display=swap" rel="stylesheet">
+
     {{ if .Site.IsServer }}
       {{ $cssOpts := (dict "targetPath" "styles/main.css" "enableSourceMap" true ) }}
       {{ $styles := resources.Get "css/main.sass" | toCSS $cssOpts }}
@@ -27,10 +38,6 @@
     {{ partial "design-section" }}
     {{ partial "footer" }}
 
-
-
-    
-    
     {{ $js := resources.Get "js/app.js" | babel | js.Build "main.js" | resources.Minify }}
     <script src="{{ $js.Permalink }}"></script>
   </body>
