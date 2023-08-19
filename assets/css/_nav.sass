@@ -7,6 +7,11 @@ nav
   z-index: 9999
   transform: translateY(0)
 
+  +from(s)
+    padding-block: 0
+    padding-top: 0
+    margin-top: 1rem
+
   &.is-hidden 
     opacity: 0
     transform: translateY(-100%)
@@ -23,12 +28,16 @@ nav
     border-radius: 9999px
     align-items: center
     padding: .75rem 1.25rem
+
+    +from(s)
+      flex-direction: column
+      flex-direction: row
+      padding: 1.5rem 2rem
     
   li
     list-style-type: none
     text-align: center
     
-
   li:first-of-type
       margin-right: auto
       text-align: left
@@ -36,7 +45,8 @@ nav
   li + li
     margin-left: 1rem
 
-
+    +from(s)
+      margin-top: 0
 
   svg
     height: 18px
@@ -58,33 +68,8 @@ nav
     transition: all 0.2s ease-in-out
     font-family: $font-headline
 
+    +from(s)
+      font-size: 14px
+
     &:hover
       color: $color-gray-dk
-    
-@media screen and (min-width: 768px)
-  nav
-    padding-block: 0
-    padding: 1rem
-    padding-top: 0
-    margin-top: 1rem
-    width: 100%
-    position: fixed
-    top: 0
-    transition: all 0.3s ease-in-out
-    z-index: 9999
-
-    ul
-      display: flex
-      background-color: $color-green-dk
-      border-radius: 9999px
-      flex-direction: column
-      padding: .75rem 1.25rem
-      flex-direction: row
-      padding: 1.5rem 2rem
-
-    li + li
-      margin-left: 1rem
-      margin-top: 0
-
-    a
-      font-size: 14px
