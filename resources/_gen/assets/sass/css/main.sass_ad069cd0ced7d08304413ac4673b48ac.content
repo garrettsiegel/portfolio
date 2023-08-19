@@ -363,4 +363,34 @@ nav {
     width: 50px;
     margin-left: 1rem; }
 
+.footer {
+  background-color: #000;
+  color: #fff; }
+  .footer__contact {
+    padding: 1rem 0;
+    text-align: center; }
+    @media screen and (min-width: 780px) {
+      .footer__contact {
+        padding: 1rem 2rem;
+        text-align: left; } }
+    .footer__contact h3 {
+      color: #E63946; }
+    .footer__contact a {
+      color: #fff; }
+      .footer__contact a:hover {
+        color: #454955; }
+    .footer__contact a:first-of-type {
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      display: block; }
+    .footer__contact a:last-of-type {
+      font-weight: 500;
+      letter-spacing: 0.5px; }
+  .footer__credits {
+    background-color: #454955;
+    padding-block: 1rem; }
+    .footer__credits p {
+      font-size: 0.8rem;
+      text-align: center; }
+
 /*# sourceMappingURL=main.css.map */
