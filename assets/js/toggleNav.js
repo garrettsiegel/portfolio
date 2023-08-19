@@ -15,10 +15,8 @@ class ToggleNav {
       timeoutId = setTimeout(() => {
         if (window.scrollY > lastScrollY) {
           nav.classList.add('is-hidden')
-          console.log('down')
         } else {
           nav.classList.remove('is-hidden')
-          console.log('up')
         }
         lastScrollY = window.scrollY
       }

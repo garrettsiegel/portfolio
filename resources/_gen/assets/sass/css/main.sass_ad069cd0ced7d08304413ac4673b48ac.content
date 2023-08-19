@@ -205,34 +205,52 @@ nav {
   .about p + p {
     margin-top: 1rem; }
 
-.design {
-  margin-top: 2.5rem; }
-  .design__bottom {
-    padding: 2rem;
-    display: flex;
-    height: 50vh; }
-    .design__bottom-l {
-      width: 50%; }
-      .design__bottom-l p {
-        font-weight: 700; }
-    .design__bottom-r {
-      width: 50%;
-      height: 100%; }
-      .design__bottom-r .h3 {
-        font-weight: 700; }
-    .design__bottom-section {
-      height: 100%; }
-  .design__link {
-    display: flex;
-    margin-top: 2rem; }
-    .design__link svg {
-      width: 25px;
-      margin-left: 0.5rem; }
-      .design__link svg g {
-        fill: #3F7D20;
-        transition: all 0.2s ease-in-out; }
-    .design__link:hover svg g {
-      fill: #000; }
+.design__bottom {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 780px) {
+    .design__bottom {
+      flex-direction: row;
+      padding: 2rem; } }
+  .design__bottom .h2 {
+    font-size: 2rem; }
+    @media screen and (min-width: 780px) {
+      .design__bottom .h2 {
+        font-size: 3rem;
+        overflow-wrap: break-word; } }
+  .design__bottom-l, .design__bottom-r {
+    width: 100%; }
+    @media screen and (min-width: 780px) {
+      .design__bottom-l, .design__bottom-r {
+        width: 50%; } }
+  .design__bottom-l p {
+    font-weight: 700; }
+  .design__bottom-r {
+    height: 100%; }
+    .design__bottom-r .h3 {
+      font-weight: 700; }
+  .design__bottom-section {
+    height: 100%; }
+
+.design__link {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem; }
+  @media screen and (min-width: 780px) {
+    .design__link {
+      flex-direction: row; } }
+  .design__link svg {
+    width: 50px;
+    margin-left: 0.5rem; }
+    @media screen and (min-width: 780px) {
+      .design__link svg {
+        width: 25px; } }
+    .design__link svg g {
+      fill: #3F7D20;
+      transition: all 0.2s ease-in-out; }
+  .design__link:hover svg g {
+    fill: #000; }
 
 .design-grid {
   width: calc( 400px * 9);
@@ -287,10 +305,14 @@ nav {
         margin-top: 0; } }
 .webdev__headline {
   font-size: 1.5rem;
-  text-align: center; }
+  text-align: center;
+  overflow-wrap: break-word; }
   @media screen and (min-width: 780px) {
     .webdev__headline {
       text-align: left;
+      font-size: 2rem; } }
+  @media screen and (min-width: 1300px) {
+    .webdev__headline {
       font-size: 3rem; } }
 .webdev__skills {
   display: grid;
@@ -323,11 +345,17 @@ nav {
 
 .webdev__bottom {
   display: flex;
-  height: 100vh;
-  background-color: lightgray; }
-  .webdev__bottom-left, .webdev__bottom-right {
-    width: 50%; }
-
+  flex-direction: column;
+  background-color: lightgray;
+  padding: 2rem 1rem; }
+  @media screen and (min-width: 780px) {
+    .webdev__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 2rem; } }
+  @media screen and (min-width: 780px) {
+    .webdev__bottom-left, .webdev__bottom-right {
+      width: 48%; } }
 .webdev__links {
   display: flex;
   align-items: center; }

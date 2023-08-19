@@ -1,40 +1,35 @@
 .webdev
-  // margin-top: 4rem
   
   &__top
     margin-block: 4rem
     padding-inline: 1rem
 
-
     +from(s)
       display: flex
       padding-inline: 3rem
-      // background-color: orange
 
-    &-left, &-right
-
+    &-left,
+    &-right
       +from(s)
         width: 50%
-
-
-    &-left
-      // background-color: red
 
     &-right
       margin-top: 2.5rem
 
       +from(s)
         margin-top: 0
-      // background-color: green
 
   &__headline
     font-size: 1.5rem
     text-align: center
+    overflow-wrap: break-word
 
     +from(s)
       text-align: left
+      font-size: 2rem
+
+    +from(l)
       font-size: 3rem
-      
 
   &__skills
     display: grid
@@ -71,13 +66,21 @@
       object-fit: cover
 
   &__bottom
-    // margin-top: 4rem
     display: flex
-    height: 100vh
+    flex-direction: column
     background-color: lightgray
+    padding: 2rem 1rem
 
-    &-left, &-right
-      width: 50%
+    +from(s)
+      flex-direction: row
+      justify-content: space-between
+      padding: 2rem
+
+    &-left,
+    &-right
+
+      +from(s)
+        width: 48%
 
   &__links
     display: flex
@@ -85,4 +88,3 @@
     svg
       width: 50px
       margin-left: 1rem
-      // margin: 0 1rem

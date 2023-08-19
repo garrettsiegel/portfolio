@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 class gridScroll {
   constructor() {
-    this.gridScrollWebDev()
+    // this.gridScrollWebDev()
     this.gridScroll()
 
   }
