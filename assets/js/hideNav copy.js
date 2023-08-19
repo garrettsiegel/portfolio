@@ -8,10 +8,15 @@ class HideNav {
   }
 
   handleScrollUp = () => {
-    this.nav.classList.remove('is-hidden');
-    this.nav.classList.add('is-visible');
-    clearTimeout(this.scrollTimeout);
-    this.scrollTimeout = setTimeout(this.handleScrollStop, 150);
+    
+    
+
+    this.nav.classList.remove('is-hidden') && this.nav.classList.add('is-visible')
+ 
+    // console.log(this.scrollTimeout)
+    // clears timeout if user scrolls up again before 150ms
+    // clearTimeout(this.scrollTimeout);
+    // this.scrollTimeout = setTimeout(this.handleScrollStop, 150);
   }
 
   handleScrollDown = () => {
@@ -20,8 +25,8 @@ class HideNav {
     clearTimeout(this.scrollTimeout);
   }
 
-  handleScrollStop = () => {
-  }
+  // handleScrollStop = () => {
+  // }
 
   onScroll = () => {
     const scrollTop = window.scrollY;

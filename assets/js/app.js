@@ -1,28 +1,23 @@
-import HideNav from "./hideNav"
+import ToggleNav from "./toggleNav"
+import IntroButton from "./introButton"
 import LazyLoad from "./lazyLoad"
 import gridScroll from "./gridScroll"
+
 import gsap from 'gsap'
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger)
 
 class App {
 	constructor() {
-		this.downButton = document.querySelector('.intro__button')
-		new HideNav()
+		new ToggleNav()
+		new IntroButton()
+
 		new LazyLoad()
-		this.events()
 		this.skillsAnimation()
 		new gridScroll()
 	}
 
-	events = () => {
-    this.downButton.addEventListener('click', this.downButtonHandler)
-  }
-
-	downButtonHandler = () => {
-    gsap.to(window, { duration: 1, scrollTo: { y: '.about' }, ease: 'power2.out' })
-  }
+	
 
 	skillsAnimation = () => {
     const tl = gsap.timeline({
