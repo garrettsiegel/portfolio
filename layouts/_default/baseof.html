@@ -30,12 +30,10 @@
     {{ end }}
   </head>
   <body>
-
-    {{ partial "nav" }}
+   
     {{ partial "intro" }}
     {{ partial "about" }}
     {{ partial "webdev-section" }}
-    {{ partial "design-section" }}
     {{ partial "footer" }}
 
     {{ $js := resources.Get "js/app.js" | babel | js.Build "main.js" | resources.Minify }}

@@ -1,18 +1,14 @@
-import ToggleNav from "./toggleNav"
 import IntroButton from "./introButton"
 import AnimationSkills from "./animationSkills"
-
+import Modal from "./modal"
 import LazyLoad from "./lazyLoad"
-import gridScroll from "./gridScroll"
 
 class App {
 	constructor() {
-		new ToggleNav()
 		new IntroButton()
     new AnimationSkills()
-
-		new LazyLoad()
-		new gridScroll()
+		new Modal()
+		new LazyLoad()		
 	}
 
 }

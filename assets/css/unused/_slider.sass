@@ -1,0 +1,135 @@
+$height: 85vh
+
+.webdev__projects
+  margin-top: 4rem
+
+  h2
+    font-size: 2rem
+    text-align: center
+
+    +from(s)
+      font-size: 2.5rem
+
+    // +from(m)
+    //   font-size: 3rem
+
+.webdev__container
+  margin-top: 1rem
+  
+
+.slider
+  height: 80vh
+  position: relative
+  max-width: 700px
+  overflow: hidden
+  margin-inline: auto
+  border-radius: 1rem
+
+  +from(s)
+    height: $height
+
+.slide
+  height: 100%
+  position: absolute
+  transition: all 0.4s ease-in-out
+  display: flex
+  flex-direction: column
+  
+
+  +from(s)
+    // flex-direction: row
+
+  &__left
+    width: 100%
+    height: 50%
+
+    // +from(s)
+    //   width: 50%
+    //   height: 100%
+
+    // +from(m)
+    //   width: 67%
+
+    img
+      height: 100%
+      object-fit: cover
+      // object-position: top
+
+  &__right
+    background-color: $color-gray-lt
+    // color: $color-white
+    padding: 2.5rem
+    width: 100%
+    height: 50%
+    // overflow: hidden
+
+    // +from(s)
+    //   width: 50%
+    //   height: 100%
+    //   padding: 2rem
+
+    // +from(m)
+    //   width: 33%
+   
+
+    h3
+      // color: $color-gray-lt
+      font-size: 1rem
+      line-height: 1
+
+      +from(s)
+        font-size: 1.5rem
+
+    p
+      font-size: 0.9rem
+      margin-top: 1rem
+      margin-bottom: 0.5rem
+
+      +from(s)
+        font-size: 1rem
+
+    a
+      text-transform: uppercase
+      color: $color-gray-dk
+      text-decoration: underline
+      // margin-top: 0.5rem
+
+      &:hover
+        // color: $color-gray-lt
+
+.btn
+  position: absolute
+  width: 50px
+  height: 80px
+  padding: 10px
+  border: none
+  z-index: 10px
+  cursor: pointer
+  background-color: #00000060
+  color: $color-white
+  font-size: 1.25rem
+  font-weight: 900
+
+  +from(s)
+
+    &:active
+      transform: scale(1.1)
+      transform-origin: center
+
+  &-prev, &-next
+    top: 50%
+    transform: translateY(-50%)
+
+    +from(s)
+      top: 45%
+      transform: none
+
+  &-prev
+    left: 0
+    border-top-right-radius: 0.25rem
+    border-bottom-right-radius: 0.25rem
+
+  &-next
+    right: 0
+    border-top-left-radius: 0.25rem
+    border-bottom-left-radius: 0.25rem

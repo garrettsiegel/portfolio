@@ -30,6 +30,13 @@ $breakpoints: ("s": 780px, "m": 1000px, "l": 1300px)
   justify-content: center
   border-bottom: 1px solid #d0d0d0
 
+=flex($direction: row, $justify: flex-start, $align: flex-start, $wrap: nowrap)
+  display: flex
+  flex-direction: $direction
+  justify-content: $justify
+  align-items: $align
+  flex-wrap: $wrap
+
 
 =flexColumnAlignCenter
   display: flex
