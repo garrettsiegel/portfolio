@@ -8,7 +8,7 @@ class App {
 		new IntroButton()
     new AnimationSkills()
 		new Modal()
-		new LazyLoad()		
+		new LazyLoad()
 	}
 
 }

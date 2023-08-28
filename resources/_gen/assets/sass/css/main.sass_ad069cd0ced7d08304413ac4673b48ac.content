@@ -344,6 +344,18 @@ dialog {
   @media screen and (min-width: 780px) {
     .modal__grid {
       flex-wrap: nowrap; } }
+  .modal__grid.alt {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem; }
+    @media screen and (min-width: 780px) {
+      .modal__grid.alt {
+        grid-template-columns: 1fr 1fr; } }
+    .modal__grid.alt .modal__image {
+      margin-left: 0; }
+      @media screen and (min-width: 780px) {
+        .modal__grid.alt .modal__image {
+          margin-top: 0; } }
 .modal__image {
   width: 100%; }
   .modal__image img {

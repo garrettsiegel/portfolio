@@ -57,8 +57,6 @@ dialog
   &__desc
     margin-top: 1.5rem
 
-    p
-
   &__skills
     display: flex
     flex-wrap: wrap
@@ -77,17 +75,12 @@ dialog
     font-size: 0.7rem
     font-weight: 700
     margin-top: 0.5rem
-    // margin-block: 1rem
 
   &__skill + *
     margin-left: 0
 
     +from(s)
       margin-left: 0.5rem
-
-
-    
-      // width: 100px
 
   &__main-img
     img
@@ -101,17 +94,24 @@ dialog
 
     +from(s)
       flex-wrap: nowrap
-    
-    // height: 20vh
-    // gap
-    // justify-content: space-between
+
+    &.alt
+      display: grid
+      grid-template-columns: 1fr
+      grid-gap: 1rem
+
+      +from(s)
+        grid-template-columns: 1fr 1fr
+        // grid-gap: 2rem
+
+      .modal__image
+        margin-left: 0
+
+        +from(s)
+          margin-top: 0
 
   &__image
     width: 100%
-    // height: 100%
-
-    // figure
-    //   height: 100%
 
     img
       width: 100%
@@ -134,7 +134,6 @@ dialog
   &__link
     display: inline-block
     margin-top: 2rem
-    // margin-bottom: 2rem
     text-decoration: none
     background-color: $color-white
     color: $color-gray
@@ -142,9 +141,6 @@ dialog
     border: 1.5px solid $color-gray
     border-radius: 0.5rem
     transition: all 0.2s ease-in-out
-
-    +from(s)
-
 
     &:hover, &:active
       background-color: $color-gray
