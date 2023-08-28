@@ -213,6 +213,52 @@ img {
     object-fit: cover;
     border-radius: 1rem; }
 
+.companies {
+  margin-top: 4rem;
+  max-width: 90%;
+  border-bottom: 1px solid #303030;
+  border-top: 1px solid #303030;
+  padding-top: 2rem;
+  padding-inline: 1rem; }
+  @media screen and (min-width: 780px) {
+    .companies {
+      max-width: 700px;
+      padding-inline: 0; } }
+  .companies h2 {
+    text-align: center;
+    font-size: 1.25rem; }
+    @media screen and (min-width: 780px) {
+      .companies h2 {
+        font-size: 1.5rem; } }
+  .companies p {
+    text-align: center;
+    margin-top: 0.5rem; }
+  .companies__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    max-width: 700px;
+    width: 100%;
+    padding-bottom: 2rem; }
+    @media screen and (min-width: 780px) {
+      .companies__container {
+        justify-content: space-between;
+        padding-bottom: 2rem; } }
+    @media screen and (min-width: 1000px) {
+      .companies__container {
+        padding-bottom: 1rem; } }
+  .companies__company svg {
+    width: 80px;
+    fill: #000; }
+  @media screen and (min-width: 780px) {
+    .companies__company {
+      width: 85px; } }
+  .companies__company + * {
+    margin-left: 1.5rem; }
+
 dialog {
   background-color: #F3EFF5;
   top: 50%;
@@ -246,7 +292,8 @@ dialog {
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  outline: none; }
   @media screen and (min-width: 780px) {
     .modal button {
       top: 2rem;
@@ -331,8 +378,8 @@ dialog {
     color: #fff; }
 
 .footer {
-  margin-top: 4rem;
-  padding-inline: 1rem; }
+  padding-inline: 1rem;
+  padding-top: 3rem; }
   @media screen and (min-width: 780px) {
     .footer {
       padding-inline: 0; } }

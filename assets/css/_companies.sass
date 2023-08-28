@@ -1,0 +1,48 @@
+.companies
+  margin-top: 4rem
+  max-width: 90%
+  border-bottom: 1px solid #303030
+  border-top: 1px solid #303030
+  padding-top: 2rem
+  padding-inline: 1rem
+
+  +from(s)
+    max-width: 700px
+    padding-inline: 0
+
+  h2
+    text-align: center
+    font-size: 1.25rem
+
+    +from(s)
+      font-size: 1.5rem
+
+  p
+    text-align: center
+    margin-top: 0.5rem
+
+  &__container
+    +flex($align: center, $justify: space-around)
+    flex-wrap: wrap
+    max-width: 700px
+    width: 100%
+    padding-bottom: 2rem
+    // margin-top: 1rem
+    +from(s)
+      justify-content: space-between
+      padding-bottom: 2rem
+
+    +from(m)
+      padding-bottom: 1rem
+      // margin-top: 2rem
+
+  &__company
+    svg
+      width: 80px
+      fill: $color-black
+
+    +from(s)
+      width: 85px
+
+  &__company + *
+    margin-left: 1.5rem

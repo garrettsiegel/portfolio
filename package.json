@@ -9,7 +9,8 @@
     "dev": "hugo server -D",
     "build": "hugo",
     "clean": "hugo --cleanDestinationDir",
-    "push": "hugo && ./git-push.sh"
+    "push": "hugo && ./git-push.sh",
+    "commit": "echo 'Enter commit message:';read commitMsg;git add .;git commit -m \"$commitMsg\";git push"
   },
   "dependencies": {
     "postcss": "^8.2.13",
