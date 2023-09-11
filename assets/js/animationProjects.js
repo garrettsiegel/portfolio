@@ -26,7 +26,7 @@ class AnimationProjects {
         start: 'top 80%',
         end: 'bottom-=200px 80%',
         scrub: 1,
-        markers: true
+        // markers: true
       }
     })
     tl.from(this.headline, { opacity: 0, y: 20 })
