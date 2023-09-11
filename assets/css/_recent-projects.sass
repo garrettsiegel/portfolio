@@ -1,35 +1,35 @@
 .recent-projects
 
-    h2
-      font-size: 1.25rem
-      text-align: center
+  h2
+    font-size: 1.25rem
+    text-align: center
 
-      +from(s)
-        font-size: 1.5rem
+    +from(s)
+      font-size: 1.5rem
 
-    &__container
-      display: grid
-      grid-template-columns: repeat(1, 1fr)
-      
-      margin-top: 1.5rem
-      grid-gap: 1rem
-      padding-inline: 1rem
+  &__container
+    display: grid
+    grid-template-columns: repeat(1, 1fr)
+    
+    margin-top: 1.5rem
+    grid-gap: 1rem
+    padding-inline: 1rem
 
-      +from(s)
-        grid-template-columns: repeat(2, 1fr)
-        padding-inline: 0
+    +from(s)
+      grid-template-columns: repeat(2, 1fr)
+      padding-inline: 0
 
-      +from(m)
-        grid-template-columns: repeat(3, 1fr)
+    +from(m)
+      grid-template-columns: repeat(3, 1fr)
 
-    &__project
-      background-color: $color-gray-lt
-      height: 250px
+  &__project
+    background-color: $color-gray-lt
+    height: 250px
+    width: 100%
+    border-radius: 1rem
+
+    img
+      height: 100%
       width: 100%
+      object-fit: cover
       border-radius: 1rem
-
-      img
-        height: 100%
-        width: 100%
-        object-fit: cover
-        border-radius: 1rem
