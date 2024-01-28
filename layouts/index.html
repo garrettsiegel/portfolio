@@ -1,13 +1,14 @@
-{{ define "main" }}
-  <main>
-    <header>
-      <h4>{{ .Title }}</h4>
-    </header>
-    <div>
-      {{ range first 5 .Site.RegularPages }}
-          {{ .Render "summary" }}
-      {{ end }}
-      
-    </div>
-  </main>
-{{ end }}
+<!DOCTYPE html>
+<html>
+  {{ partial "head" }}
+  <body>
+   
+    {{ partial "intro" }}
+    {{ partial "about" }}
+    {{ partial "webdev-section" }}
+    {{ partial "footer" }}
+
+    {{ $js := resources.Get "js/app.js" | babel | js.Build "main.js" | resources.Minify }}
+    <script src="{{ $js.Permalink }}"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<head>
+    
+    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJR4PSTKXY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RJR4PSTKXY');
+  </script>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="" />
+  <title>Garrett Siegel: Development & Design</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Syne:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  {{ if .Site.IsServer }}
+    {{ $cssOpts := (dict "targetPath" "styles/main.css" "enableSourceMap" true ) }}
+    {{ $styles := resources.Get "css/main.sass" | toCSS $cssOpts }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+  {{ else }}
+    {{ $cssOpts := (dict "targetPath" "styles/main.css" ) }}
+    {{ $styles := resources.Get "css/main.sass" | toCSS $cssOpts | postCSS | minify }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+  {{ end }}
+</head>
